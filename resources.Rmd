@@ -1,0 +1,69 @@
+---
+title: "學習資源 Learning Resources"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+-------
+
+
+
+
+## 線上教材
+
+### R 基本語法
+
+- [曾意儒-資料科學與 R 語言](http://yijutseng.github.io/DataScienceRBook/index.html).
+- [郭耀仁-認識 R 的美好](https://bookdown.org/tonykuoyj/eloquentr/)
+- DataCamp
+
+
+### 語言、文本分析與資料科學
+
+- [語言分析與資料科學](https://www.gitbook.com/book/loperntu/ladsbook/details) 
+- [開放語料庫：製程與分析](https://www.gitbook.com/book/loperntu/copens/details)
+
+
+### 數學先修
+
+-----
+
+## 線上課程
+
+-----
+
+## 專門套件
+
+### R
+
+- Importing data : `readr`
+- Representing tables: `tibble`
+- Reformatting tables: `tidyr`
+- Manipulating data frames: `dplyr`
+- Pipelines: `magrittr`
+- Working with strings: `stringr`
+- Working with factors: `forcats`
+- Working with dates: `lubridate`
+- Working with models: `broom` and `modelr`
+- Functional programming: `purrr`
+
+
+
+### Corpus and text mining
+
+
+### Machine Learning
+
+
+----
+## 必備小抄
+
+[RStudio cheat sheet](https://www.rstudio.com/resources/cheatsheets/)
+
+
+
+

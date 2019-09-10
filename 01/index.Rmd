@@ -1,0 +1,121 @@
+---
+title: "Introduction to Data Science with R"
+subtitle: "week 1"
+author: "謝舒凱"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output:
+  xaringan::moon_reader:
+    css: [default, chocolate, chocolate-fonts]
+    lib_dir: libs
+    nature:
+      beforeInit: "macros.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    yolo:
+      img: "../img/emo/boredom-small.png"
+      times: 1
+    seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: title-slide
+
+.bg-text[
+# Introduction to Data Science with R
+### week.1.orientation
+
+<hr />
+
+`r format(Sys.Date(), '%B %e, %Y')`  
+謝舒凱
+]
+
+---
+
+# Data and Data Science
+
+- content
+- Images, sounds and texts /// demo: 
+
+
+---
+# Text Mining and Text Analytics
+
+- The science of extracting useful information from text, used for analyzing texts and turning them into a more structured form.
+
+
+
+
+---
+
+```{r}
+#install.packages(c("quantmod","dygraphs"))
+library("quantmod")
+library("dygraphs")
+```
+
+---
+# symple stock market graphing
+
+```{r}
+google_stock_prices <- getSymbols("GOOG", src = "yahoo", from = "2008-01-01", auto.assign = FALSE)
+chart_Series(google_stock_prices)
+
+```
+
+
+--- 
+
+```{r}
+dygraph(google_stock_prices[,c("GOOG.Close")], main = "Google Stock Price Starting in 2008")
+```
+
+
+
+
+
+
+
+
+---
+
+class: top, right, inverse
+background-image: url(https://farm2.staticflickr.com/1223/943655732_4a8444e17b_b.jpg)
+background-color: black
+
+# Image from flickr
+
+???
+
+Presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note Presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note
+
+```
+class: bottom, right, inverse
+```
+
+---
+
+class: inverse, center, middle, title-slide
+
+# Get Started
+
+
+
+---
+
+# 這句話有是四個錯誤
+
+
+---
+# 教室
+
+```{r}
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+```
+
+
