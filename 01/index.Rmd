@@ -3,6 +3,7 @@ title: "Introduction to Data Science with R"
 subtitle: "week 1"
 author: "謝舒凱"
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
+
 output:
   xaringan::moon_reader:
     css: [default, chocolate, chocolate-fonts]
@@ -34,12 +35,93 @@ class: title-slide
 謝舒凱
 ]
 
+
+---
+# 教練團
+
+.pull-left[
+
+![:gen 350px, shadow](https://media.giphy.com/media/26Do6la9cIiHvIwMM/giphy.gif)
+]
+
+.pull-right[
+
+- Shu-Kai Hsieh
+- Yong-Fu Liao
+- Yolanda Chen
+- Jessy Chen 
+- Joy Chiang 
+]
+
+
+---
+# Data
+
+> Information in raw or unorganized form (such as alphabets, numbers, or symbols) that refer to, or represent, conditions....they are generated from different sources like financial logs, text files, multimedia forms, sensors, and instruments.
+
+
+
+![以前](https://www.mathsisfun.com/data/images/data-types.svg)
+
+
+
+
+???
+
+科普 年薪
+
+
+---
+# Data in modern form (multimodality)
+
+![modal](http://projects.intellimedia.ncsu.edu/javatutor/wp-content/uploads/sites/8/2014/04/JT_MultiModal-Infographic_BOTTOM2.gif)
+
+---
+# Data applications
+
+![](https://www.edureka.co/blog/wp-content/uploads/2017/01/Data-Science-use-cases.png)
+
+
+---
+# 數據之網
+
+![](https://cdn.readmoo.com/social/cover/ql/egrtvzh_460x580.jpg)
+
+
+
 ---
 
-# Data and Data Science
+# Data Science
 
-- content
-- Images, sounds and texts /// demo: 
+操作層次
+
+![簡易版](https://imarticus.org/wp-content/uploads/2019/05/maxresdefault.jpg)
+
+
+
+
+???
+
+slide 樣本參考 ： https://slides.yihui.name/xaringan/#27
+https://yongfu.name/slides/xaringan/#28
+
+
+---
+# Data, Information and Knowledge
+
+![:scale 80%](img/wolfram.png) 
+
+
+
+
+---
+# Data content analysis
+
+- 為何非結構性資料很重要
+
+![:scale 99%](https://www.edureka.co/blog/wp-content/uploads/2017/01/Flow-of-unstructured-data.png)
+
+
 
 
 ---
@@ -48,34 +130,16 @@ class: title-slide
 - The science of extracting useful information from text, used for analyzing texts and turning them into a more structured form.
 
 
+---
+# Example
+
+![:scale 70%](img/text.mining.png) 
+
+
 
 
 ---
-
-```{r}
-#install.packages(c("quantmod","dygraphs"))
-library("quantmod")
-library("dygraphs")
-```
-
----
-# symple stock market graphing
-
-```{r}
-google_stock_prices <- getSymbols("GOOG", src = "yahoo", from = "2008-01-01", auto.assign = FALSE)
-chart_Series(google_stock_prices)
-
-```
-
-
---- 
-
-```{r}
-dygraph(google_stock_prices[,c("GOOG.Close")], main = "Google Stock Price Starting in 2008")
-```
-
-
-
+# Multimodality and Linguistics/Communication Science
 
 
 
@@ -84,14 +148,14 @@ dygraph(google_stock_prices[,c("GOOG.Close")], main = "Google Stock Price Starti
 ---
 
 class: top, right, inverse
-background-image: url(https://farm2.staticflickr.com/1223/943655732_4a8444e17b_b.jpg)
+background-image: url(https://miro.medium.com/max/830/1*1SiijZYTcRKKT_OnOFFlXw.jpeg)
 background-color: black
 
-# Image from flickr
+# 資料科學相關學門 skill sets
 
 ???
 
-Presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note Presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note presenter's note
+Presenter's note presenter's note presenter's note presenter's note presenter's note 
 
 ```
 class: bottom, right, inverse
@@ -101,21 +165,96 @@ class: bottom, right, inverse
 
 class: inverse, center, middle, title-slide
 
-# Get Started
+# R, why you
+
+
+
+
+---
+# 怎麼學
+
+參考助教的[學習歷程](https://yongfu.name/2018/01/31/RlearningPath.html) 
+
+
+- 英文能力
+
+- 3 hr/day
+
+
+---
+# 思維、習慣、態度
+
+
+- [**Domain knowledge and social life**] 結合自己領域知識、拓展社會生活經驗
+
+- [**Hacker Mindset**] 沒資料，找資料；有資料，動手做。
+
+- [**Focused and Diffused mode**] 大腦的專注與發散模式
+
+
+---
+# 找出四個錯誤
+
+`這句話友是四個錯唔`
+
+
+???
+
+定勢效應
+
+
+---
+# 本堂課設計
+
+- [課程網頁](https://rlads2019.github.io/)
+- 評分標準與方式（作業 30%，期中 30%，期末 40%）
+- 期中考、期末資料科學專題會議 （口頭或海報）
+- 會用到的平台與工具：**Datacamp**, **Github (classroom)**, **sli.do**, **NTU cool**
 
 
 
 ---
-
-# 這句話有是四個錯誤
-
-
----
-# 教室
+# 錯誤示範：教室在這裏
 
 ```{r}
 library(leaflet)
-leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+leaflet() %>% addTiles() %>% setView(121.5373157,25.0182396, zoom = 17)
 ```
 
+???
+
+不好的炫技範例
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+.pull-left[
+## 那就，開始學習吧！
+
+![:gen 250px, shadow](https://media.giphy.com/media/qSNtgm0PgG6vm/giphy.gif)
+
+]
+
+
+
+.pull-right[
+
+![:gen 350px, shadow](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
+
+
+]
 
