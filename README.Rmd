@@ -30,17 +30,9 @@ This is an introduction to the data science with R, focused on textual data in p
 ## 課程投影片 | slides
 
 - <span style="color:brown; font-weight:bold"> Week.1 </span>
-    - [slides](lectures/01/index.html)
+    - [slides](/01/index.html)
 
  
-
-
-
-
-
-
-
-
 
 
 ## 課綱
