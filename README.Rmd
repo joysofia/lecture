@@ -31,8 +31,7 @@ This is an introduction to the data science with R, focused on textual data in p
 
 - <span style="color:brown; font-weight:bold"> Week.1 </span>
     - [slides](lectures/01/index.html)
-    - [data]()
-    - [self-pace learning]()
+
  
 
 
