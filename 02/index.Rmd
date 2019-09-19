@@ -68,7 +68,7 @@ class: title-slide
 
 
 ---
-## 學習是歷程，成果是孩子
+## 學習是歷程，成果當孩子
 
 
 <img src = 'img/dsr.proj.png' scale="50%"></img>
@@ -105,7 +105,7 @@ https://www.socialmediatoday.com/user_media/diveimage/18_domo_data-never-sleeps-
 
 > Biological signals, music, images, video, customer reviews, webpages, medical records, software, game logs, social networks, environmental signals, astro-data, neuron spikes, etc.
 
-- 主要大類型：Symbolic and Signal data
+- 主要大類型：Symbols/Signs and Signal
  
 
 
@@ -215,6 +215,8 @@ This course will provide an introduction to this exciting growing cross-discipli
   - Ashley Madison
   - `Deep web` (暗黑網路)
 
+
+
 ---
 ## DS, AI and Cognitive Computing
 #### 與 AI / 認知計算的整合趨勢
@@ -310,7 +312,7 @@ http://www.mastersindatascience.org/careers/data-scientist/
 
 
 ---
-# Rstudio
+# Rstudio and Base R
 
 - See notebook (`week2.note`)
 
