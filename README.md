@@ -34,13 +34,9 @@ This is an introduction to the data science with R, focused on textual data in p
 - <span style="color:brown; font-weight:bold"> Week.1 </span>
     - [slides](01/index.html)
 
- 
-
-
-
-
-
-
+- <span style="color:brown; font-weight:bold"> Week.2 </span>
+    - [slides](02/index.html)
+    - [R.notes.Rmd](02/week2_notes.Rmd)
 
 
 
@@ -83,7 +79,9 @@ Jessy
 Joy
 ```
 
-
+## 學習資源
+- Datacamp
+- [線上學習資源](resources.html)
 
 
 <!--
