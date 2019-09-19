@@ -35,7 +35,15 @@ sqrt(36)
 ```
 
 
-- parameter (參數) 與 argument (引數)
+## Parameter (參數) 與 Argument (引數). 
+  - argument: 【呼叫者】傳給【被呼叫者】的「值」(value)
+  - parameter: 【被呼叫者】用來接收【呼叫者】傳來引數的「變數」(variable)
+
+自然語言亂入：`欸()`, `叫(x, num, pitch)`. 
+
+
+> `叫(啊, num = 3, pitch = 'high')`
+
 
 ```{r}
 head(cars, n=10)
