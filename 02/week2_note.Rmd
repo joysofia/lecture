@@ -1,0 +1,67 @@
+---
+title: "Week.2"
+output: html_notebook
+---
+
+# Introduction to R
+
+R as a programming language.
+
+# Getting started with R in a few steps
+
+- try out the console
+
+## Arithmetrics with R 
+
+- Basic arithmetic operations：`+` (addition), `-` (substraction), `*` (multiplication), `/` (division), `^` (exponentiation)
+
+```{r}
+3+5
+14/2
+```
+
+- Basic arithmetic **functions**
+    - logarithmus and exponentials: `log2(x), log10(x), exp(x)`
+    - Others: `abs(x)`, `sqrt(x)`
+
+```{r}  
+log2(6)  
+sqrt(36)
+```
+> Getting help
+
+```{r}
+?sqrt
+```
+
+
+
+# Data types
+
+
+# Install packages
+
+```{r}
+install.packages("tidyverse")
+```
+
+
+
+```{r}
+install.packages(c("quantmod", "dygraphs"))
+
+```
+
+
+```{r}
+library("quantmod")
+library(dygraphs)
+```
+
+- Let's check Foxconn stock since the 2008
+
+```{r}
+fox_stock_prices <- getSymbols("2354.TW", src = "yahoo", from = "2008-01-01", auto.assign = FALSE)
+chartSeries(fox_stock_prices)
+```
+
