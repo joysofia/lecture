@@ -75,13 +75,13 @@ is_student <- TRUE
 # Install packages
 
 ```{r}
-install.packages("tidyverse")
+#install.packages("tidyverse")
 ```
 
 
 
 ```{r}
-install.packages(c("quantmod", "dygraphs"))
+#install.packages(c("quantmod", "dygraphs"))
 
 ```
 
