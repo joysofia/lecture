@@ -35,8 +35,33 @@ sqrt(36)
 ```
 
 
+- parameter (參數) 與 argument (引數)
+
+```{r}
+head(cars, n=10)
+
+```
+
 
 # Data types
+
+- Basic *data types*: **numeric, character, logical**
+- Supported *data structure*: **vector, matrix, factor, data frame** 
+
+
+
+
+# Variable and value assignment 變數與賦值 `<-`
+
+```{r}
+# numeric variable
+my_age <- 40
+# character variable
+my_name <- "shukai"
+# logical variable (e.g., are you a student?) y/n
+is_student <- TRUE
+```
+
 
 
 # Install packages
@@ -54,14 +79,18 @@ install.packages(c("quantmod", "dygraphs"))
 
 
 ```{r}
-library("quantmod")
+library(quantmod)
 library(dygraphs)
 ```
 
-- Let's check Foxconn stock since the 2008
+- Let's check Google stock since the 2008
 
 ```{r}
-fox_stock_prices <- getSymbols("2354.TW", src = "yahoo", from = "2008-01-01", auto.assign = FALSE)
-chartSeries(fox_stock_prices)
+g_stock_prices <- getSymbols("GOOG", src = "yahoo", from = "2008-01-01", auto.assign = FALSE)
+chartSeries(g_stock_prices)
 ```
 
+```{r}
+dygraph(g_stock_prices[,c("GOOG.Close")], main = "Google Stock Price Starting in 2008")
+
+```

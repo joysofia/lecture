@@ -289,32 +289,51 @@ summary {
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<ul>
+<li>parameter (參數) 與 argument (引數)</li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTB9LCJyZGYiOiJINHNJQUFBQUFBQUFBM1ZRVFVzRE1SQ2RabmN0RGJRV3ZIb29SYngxMFI1RVBDbjRDM3JxTmQxTmRYRk5sazJLSHYzbDFkbGtSalRRUVBMbUkrOWxYamJQMjdYY1NnQVFrQlVDUklaaEx2QVlRUTZUQVQ4QnNvdHdBV0NHV3o3T0lheGZ2RXh3UWJna3ZEcUIxOEFyNmtMU1ovMDd3cHVrdnlaOElId2l2R1haZjBZS285NjF3MkFlekZEUmRWclhsT1IxNDN6Q212VDJvMlRtZEdCK1JXMlp5bGV0Y2l6UFJWa3JyOHA5ajN6TWpnbGxiRHZmV0lNa01YeHdrWkJIZlZJNFA1aGhrbnBWdlI3TTIrbytUb0h0dUtlRThrOHM0cFBpbTZRS2tqclQ1cVV4bW1kdjFVNjNsTXpRY1RCY2RuMWpQRHZCcWl1OTlZcnZ5Y3EyWEFuZTRQZ0RiRVJpcUU0Q0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["speed"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["dist"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"4","2":"2","_rn_":"1"},{"1":"4","2":"10","_rn_":"2"},{"1":"7","2":"4","_rn_":"3"},{"1":"7","2":"22","_rn_":"4"},{"1":"8","2":"16","_rn_":"5"},{"1":"9","2":"10","_rn_":"6"},{"1":"10","2":"18","_rn_":"7"},{"1":"10","2":"26","_rn_":"8"},{"1":"10","2":"34","_rn_":"9"},{"1":"11","2":"17","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 </div>
 <div id="data-types" class="section level1">
 <h1>Data types</h1>
+<ul>
+<li>Basic <em>data types</em>: <strong>numeric, character, logical</strong></li>
+<li>Supported <em>data structure</em>: <strong>vector, matrix, factor, data frame</strong></li>
+</ul>
+</div>
+<div id="variable-and-value-assignment---" class="section level1">
+<h1>Variable and value assignment 變數與賦值 <code>&lt;-</code></h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBudW1lcmljIHZhcmlhYmxlXG5teV9hZ2UgPC0gNDBcbiMgY2hhcmFjdGVyIHZhcmlhYmxlXG5teV9uYW1lIDwtIFwic2h1a2FpXCJcbiMgbG9naWNhbCB2YXJpYWJsZSAoZS5nLiwgYXJlIHlvdSBhIHN0dWRlbnQ/KSB5L25cbmlzX3N0dWRlbnQgPC0gVFJVRVxuYGBgIn0= -->
+<pre class="r"><code># numeric variable
+my_age &lt;- 40
+# character variable
+my_name &lt;- &quot;shukai&quot;
+# logical variable (e.g., are you a student?) y/n
+is_student &lt;- TRUE</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="install-packages" class="section level1">
 <h1>Install packages</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpZHl2ZXJzZVwiKVxuXG5gYGAifQ== -->
-<pre class="r"><code>install.packages(&quot;tidyverse&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcInRpZHl2ZXJzZVwiKVxuYGBgIn0= -->
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSW5zdGFsbGluZyBwYWNrYWdlIGludG8g4oCYL1VzZXJzL3NodWthaS9MaWJyYXJ5L1IvMy41L2xpYnJhcnnigJlcbihhcyDigJhsaWLigJkgaXMgdW5zcGVjaWZpZWQpXG7lmJfoqaYgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy41L3RpZHl2ZXJzZV8xLjIuMS50Z3onXG5Db250ZW50IHR5cGUgJ2FwcGxpY2F0aW9uL3gtZ3ppcCcgbGVuZ3RoIDg4NzU0IGJ5dGVzICg4NiBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDg2IEtCXG4ifQ== -->
-<pre><code>Installing package into ‘/Users/shukai/Library/R/3.5/library’
-(as ‘lib’ is unspecified)
-嘗試 URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/tidyverse_1.2.1.tgz'
-Content type 'application/x-gzip' length 88754 bytes (86 KB)
-==================================================
-downloaded 86 KB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy81ay9sczlwX3dzMTAwZF9sNGdndGh2ZjgxNzAwMDAwZ24vVC8vUnRtcG9VZnFkdi9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/5k/ls9p_ws100d_l4ggthvf81700000gn/T//RtmpoUfqdv/downloaded_packages</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -323,62 +342,37 @@ The downloaded binary packages are in
 <pre class="r"><code>install.packages(c(&quot;quantmod&quot;, &quot;dygraphs&quot;))
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSW5zdGFsbGluZyBwYWNrYWdlcyBpbnRvIOKAmC9Vc2Vycy9zaHVrYWkvTGlicmFyeS9SLzMuNS9saWJyYXJ54oCZXG4oYXMg4oCYbGli4oCZIGlzIHVuc3BlY2lmaWVkKVxu5ZiX6KmmIFVSTCAnaHR0cHM6Ly9jcmFuLnJzdHVkaW8uY29tL2Jpbi9tYWNvc3gvZWwtY2FwaXRhbi9jb250cmliLzMuNS9xdWFudG1vZF8wLjQtMTUudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA5NjEyNDMgYnl0ZXMgKDkzOCBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDkzOCBLQlxuXG7lmJfoqaYgVVJMICdodHRwczovL2NyYW4ucnN0dWRpby5jb20vYmluL21hY29zeC9lbC1jYXBpdGFuL2NvbnRyaWIvMy41L2R5Z3JhcGhzXzEuMS4xLjYudGd6J1xuQ29udGVudCB0eXBlICdhcHBsaWNhdGlvbi94LWd6aXAnIGxlbmd0aCA0MjQwNTYgYnl0ZXMgKDQxNCBLQilcbj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5kb3dubG9hZGVkIDQxNCBLQlxuIn0= -->
-<pre><code>Installing packages into ‘/Users/shukai/Library/R/3.5/library’
-(as ‘lib’ is unspecified)
-嘗試 URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/quantmod_0.4-15.tgz'
-Content type 'application/x-gzip' length 961243 bytes (938 KB)
-==================================================
-downloaded 938 KB
-
-嘗試 URL 'https://cran.rstudio.com/bin/macosx/el-capitan/contrib/3.5/dygraphs_1.1.1.6.tgz'
-Content type 'application/x-gzip' length 424056 bytes (414 KB)
-==================================================
-downloaded 414 KB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5UaGUgZG93bmxvYWRlZCBiaW5hcnkgcGFja2FnZXMgYXJlIGluXG5cdC92YXIvZm9sZGVycy81ay9sczlwX3dzMTAwZF9sNGdndGh2ZjgxNzAwMDAwZ24vVC8vUnRtcG9VZnFkdi9kb3dubG9hZGVkX3BhY2thZ2VzXG4ifQ== -->
-<pre><code>
-The downloaded binary packages are in
-    /var/folders/5k/ls9p_ws100d_l4ggthvf81700000gn/T//RtmpoUfqdv/downloaded_packages</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShcInF1YW50bW9kXCIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>library(&quot;quantmod&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShxdWFudG1vZClcbmxpYnJhcnkoZHlncmFwaHMpXG5gYGAifQ== -->
+<pre class="r"><code>library(quantmod)
+library(dygraphs)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiB4dHNcbkxvYWRpbmcgcmVxdWlyZWQgcGFja2FnZTogem9vXG5cbkF0dGFjaGluZyBwYWNrYWdlOiDigJh6b2/igJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBhcy5EYXRlLCBhcy5EYXRlLm51bWVyaWNcblxuTG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBUVFJcblZlcnNpb24gMC40LTAgaW5jbHVkZWQgbmV3IGRhdGEgZGVmYXVsdHMuIFNlZSA/Z2V0U3ltYm9scy5cbiJ9 -->
-<pre><code>Loading required package: xts
-Loading required package: zoo
-
-Attaching package: ‘zoo’
-
-The following objects are masked from ‘package:base’:
-
-    as.Date, as.Date.numeric
-
-Loading required package: TTR
-Version 0.4-0 included new data defaults. See ?getSymbols.</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
-<li>Let’s check Foxconn stock since the 2008</li>
+<li>Let’s check Google stock since the 2008</li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm94X3N0b2NrX3ByaWNlcyA8LSBnZXRTeW1ib2xzKFwiMjM1NC5UV1wiLCBzcmMgPSBcInlhaG9vXCIsIGZyb20gPSBcIjIwMDgtMDEtMDFcIiwgYXV0by5hc3NpZ24gPSBGQUxTRSlcbmNoYXJ0U2VyaWVzKGZveF9zdG9ja19wcmljZXMpXG5gYGAifQ== -->
-<pre class="r"><code>fox_stock_prices &lt;- getSymbols(&quot;2354.TW&quot;, src = &quot;yahoo&quot;, from = &quot;2008-01-01&quot;, auto.assign = FALSE)
-chartSeries(fox_stock_prices)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ19zdG9ja19wcmljZXMgPC0gZ2V0U3ltYm9scyhcIkdPT0dcIiwgc3JjID0gXCJ5YWhvb1wiLCBmcm9tID0gXCIyMDA4LTAxLTAxXCIsIGF1dG8uYXNzaWduID0gRkFMU0UpXG5jaGFydFNlcmllcyhnX3N0b2NrX3ByaWNlcylcbmBgYCJ9 -->
+<pre class="r"><code>g_stock_prices &lt;- getSymbols(&quot;GOOG&quot;, src = &quot;yahoo&quot;, from = &quot;2008-01-01&quot;, auto.assign = FALSE)
+chartSeries(g_stock_prices)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZHlncmFwaChnX3N0b2NrX3ByaWNlc1ssYyhcIkdPT0cuQ2xvc2VcIildLCBtYWluID0gXCJHb29nbGUgU3RvY2sgUHJpY2UgU3RhcnRpbmcgaW4gMjAwOFwiKVxuXG5gYGAifQ== -->
+<pre class="r"><code>dygraph(g_stock_prices[,c(&quot;GOOG.Close&quot;)], main = &quot;Google Stock Price Starting in 2008&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiV2Vlay4yIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIEludHJvZHVjdGlvbiB0byBSCgpSIGFzIGEgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UuCgojIEdldHRpbmcgc3RhcnRlZCB3aXRoIFIgaW4gYSBmZXcgc3RlcHMKCi0gdHJ5IG91dCB0aGUgY29uc29sZQoKIyMgQXJpdGhtZXRyaWNzIHdpdGggUiAKCi0gQmFzaWMgYXJpdGhtZXRpYyBvcGVyYXRpb25z77yaYCtgIChhZGRpdGlvbiksIGAtYCAoc3Vic3RyYWN0aW9uKSwgYCpgIChtdWx0aXBsaWNhdGlvbiksIGAvYCAoZGl2aXNpb24pLCBgXmAgKGV4cG9uZW50aWF0aW9uKQoKYGBge3J9CjMrNQoxNC8yCmBgYAoKLSBCYXNpYyBhcml0aG1ldGljICoqZnVuY3Rpb25zKioKICAgIC0gbG9nYXJpdGhtdXMgYW5kIGV4cG9uZW50aWFsczogYGxvZzIoeCksIGxvZzEwKHgpLCBleHAoeClgCiAgICAtIE90aGVyczogYGFicyh4KWAsIGBzcXJ0KHgpYAoKYGBge3J9ICAKbG9nMig2KSAgCnNxcnQoMzYpCmBgYAo+IEdldHRpbmcgaGVscAoKYGBge3J9Cj9zcXJ0CmBgYAoKCgojIERhdGEgdHlwZXMKCgojIEluc3RhbGwgcGFja2FnZXMKCmBgYHtyfQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQpgYGAKCgoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoYygicXVhbnRtb2QiLCAiZHlncmFwaHMiKSkKCmBgYAoKCmBgYHtyfQpsaWJyYXJ5KCJxdWFudG1vZCIpCmxpYnJhcnkoZHlncmFwaHMpCmBgYAoKLSBMZXQncyBjaGVjayBGb3hjb25uIHN0b2NrIHNpbmNlIHRoZSAyMDA4CgpgYGB7cn0KZm94X3N0b2NrX3ByaWNlcyA8LSBnZXRTeW1ib2xzKCIyMzU0LlRXIiwgc3JjID0gInlhaG9vIiwgZnJvbSA9ICIyMDA4LTAxLTAxIiwgYXV0by5hc3NpZ24gPSBGQUxTRSkKY2hhcnRTZXJpZXMoZm94X3N0b2NrX3ByaWNlcykKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiV2Vlay4yIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgojIEludHJvZHVjdGlvbiB0byBSCgpSIGFzIGEgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2UuCgojIEdldHRpbmcgc3RhcnRlZCB3aXRoIFIgaW4gYSBmZXcgc3RlcHMKCi0gdHJ5IG91dCB0aGUgY29uc29sZQoKIyMgQXJpdGhtZXRyaWNzIHdpdGggUiAKCi0gQmFzaWMgYXJpdGhtZXRpYyBvcGVyYXRpb25z77yaYCtgIChhZGRpdGlvbiksIGAtYCAoc3Vic3RyYWN0aW9uKSwgYCpgIChtdWx0aXBsaWNhdGlvbiksIGAvYCAoZGl2aXNpb24pLCBgXmAgKGV4cG9uZW50aWF0aW9uKQoKYGBge3J9CjMrNQoxNC8yCmBgYAoKLSBCYXNpYyBhcml0aG1ldGljICoqZnVuY3Rpb25zKioKICAgIC0gbG9nYXJpdGhtdXMgYW5kIGV4cG9uZW50aWFsczogYGxvZzIoeCksIGxvZzEwKHgpLCBleHAoeClgCiAgICAtIE90aGVyczogYGFicyh4KWAsIGBzcXJ0KHgpYAoKYGBge3J9ICAKbG9nMig2KSAgCnNxcnQoMzYpCmBgYAo+IEdldHRpbmcgaGVscAoKYGBge3J9Cj9zcXJ0CmBgYAoKCi0gcGFyYW1ldGVyICjlj4PmlbgpIOiIhyBhcmd1bWVudCAo5byV5pW4KQoKYGBge3J9CmhlYWQoY2Fycywgbj0xMCkKCmBgYAoKCiMgRGF0YSB0eXBlcwoKLSBCYXNpYyAqZGF0YSB0eXBlcyo6ICoqbnVtZXJpYywgY2hhcmFjdGVyLCBsb2dpY2FsKioKLSBTdXBwb3J0ZWQgKmRhdGEgc3RydWN0dXJlKjogKip2ZWN0b3IsIG1hdHJpeCwgZmFjdG9yLCBkYXRhIGZyYW1lKiogCgoKCgojIFZhcmlhYmxlIGFuZCB2YWx1ZSBhc3NpZ25tZW50IOiuiuaVuOiIh+izpuWAvCBgPC1gCgpgYGB7cn0KIyBudW1lcmljIHZhcmlhYmxlCm15X2FnZSA8LSA0MAojIGNoYXJhY3RlciB2YXJpYWJsZQpteV9uYW1lIDwtICJzaHVrYWkiCiMgbG9naWNhbCB2YXJpYWJsZSAoZS5nLiwgYXJlIHlvdSBhIHN0dWRlbnQ/KSB5L24KaXNfc3R1ZGVudCA8LSBUUlVFCmBgYAoKCgojIEluc3RhbGwgcGFja2FnZXMKCmBgYHtyfQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQpgYGAKCgoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoYygicXVhbnRtb2QiLCAiZHlncmFwaHMiKSkKCmBgYAoKCmBgYHtyfQpsaWJyYXJ5KHF1YW50bW9kKQpsaWJyYXJ5KGR5Z3JhcGhzKQpgYGAKCi0gTGV0J3MgY2hlY2sgR29vZ2xlIHN0b2NrIHNpbmNlIHRoZSAyMDA4CgpgYGB7cn0KZ19zdG9ja19wcmljZXMgPC0gZ2V0U3ltYm9scygiR09PRyIsIHNyYyA9ICJ5YWhvbyIsIGZyb20gPSAiMjAwOC0wMS0wMSIsIGF1dG8uYXNzaWduID0gRkFMU0UpCmNoYXJ0U2VyaWVzKGdfc3RvY2tfcHJpY2VzKQpgYGAKCmBgYHtyfQpkeWdyYXBoKGdfc3RvY2tfcHJpY2VzWyxjKCJHT09HLkNsb3NlIildLCBtYWluID0gIkdvb2dsZSBTdG9jayBQcmljZSBTdGFydGluZyBpbiAyMDA4IikKCmBgYA==</div>
 
 
 
