@@ -50,21 +50,21 @@ This is an introduction to the data science with R, focused on textual data in p
 ++++  | +++++  | ++++++++++++++++++++++++++ |++++++++++++++++++++++++++++++++++++++++++
 1    | 09/12  | Orientation   | Rstudio installation, Markdown, Datacamp custom track
 2    | 09/19  | Introduction to Data Science and Text Analytics | Rstudio environment and basics of R: variables, data types, built-in plot; 
-3    | 09/26  | R data structures| `ggplot2` 
+3    | 09/26  | R data structures| vectors; conditionals
 4    | 10/03  | Preparing / Obtaining Data | data structures; I/O, looping
-5    | 10/10	| Holiday | (review of statistics)
-6    | 10/17	| Data Wrangling | `dplyr`
+5    | 10/10	| Holiday | (review of Base R using `DataCamp custom track`)
+6    | 10/17	| Data Wrangling | `dplyr`； `ggplot2` 
 7    | 10/24  | Data Wrangling | more on `dplyr`; tidying data
-8    | 10/31	| Exploratory data analysis | statistics (descriptive, hypothesis testing, linear regression) 
+8    | 10/31	| Exploratory data analysis | statistics (descriptive, hypothesis testing, linear regression); string manipulation; 
 9    | 11/07	| **Mid-term exam** 	 | 
-10   | 11/14	| Exploratory data analysis | encoding; string manipulation; regular expression
+10   | 11/14	| Data preprocessing | encoding; regular expression
 11 	 | 11/21	| Corpus and NLP       |  handling large textual data; Chinese word segmentation/POS
 12 	 | 11/28	| (Guest lecture)      |  (Chinese AI-NLP forum)        
-13 	 | 12/05	| Corpus and data modelling       |  handling large Chinese textual data
-14 	 | 12/12	| Text analytics [I]: text classification and clustering       |  modeling and evaluation
-15 	 | 12/19	| Text analytics [II]: sentiment analysis	 | 
-16 	 | 12/26	| Text analytics [III]: texts in the social media|  web crawling:HTML parsing (rvest)
-17 	 | 01/02	| Reporting and Presenting Data   | data communication 
+13 	 | 12/05	| Statistics and Data modelling       |  web: crawling
+14 	 | 12/12	| Text analytics [I]: text classification and clustering       |  modeling  | web: cleaning and preprocessing
+15 	 | 12/19	| Text analytics [II]: sentiment analysis	 | web: applications
+16 	 | 12/26	| Text analytics [III]: texts in the social media|  web: applications
+17 	 | 01/02	| Reporting and Presenting Data   | wrap-up
 18 	 | 01/09	| **Final term project presentation and report due**	             | (oral and poster presentation)
 
 
