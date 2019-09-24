@@ -61,7 +61,7 @@ This is an introduction to the data science with R, focused on textual data in p
 11 	 | 11/21	| Corpus and NLP       |  handling large textual data; Chinese word segmentation/POS
 12 	 | 11/28	| (Guest lecture)      |  (Chinese AI-NLP forum)        
 13 	 | 12/05	| Statistics and Data modelling       |  web: crawling
-14 	 | 12/12	| Text analytics [I]: text classification and clustering       |  modeling  | web: cleaning and preprocessing
+14 	 | 12/12	| Text analytics [I]: text classification and clustering  | web: cleaning and preprocessing
 15 	 | 12/19	| Text analytics [II]: sentiment analysis	 | web: applications
 16 	 | 12/26	| Text analytics [III]: texts in the social media|  web: applications
 17 	 | 01/02	| Reporting and Presenting Data   | wrap-up
