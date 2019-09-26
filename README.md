@@ -38,7 +38,8 @@ This is an introduction to the data science with R, focused on textual data in p
     - [slides](02/index.html)
     - [R.notes.Rmd](02/week2_note.Rmd)
 
-
+- <span style="color:brown; font-weight:bold"> Week.3 </span>
+    - [slides](03/index.html)
 
 
 ## 課綱
