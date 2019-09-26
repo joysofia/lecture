@@ -116,6 +116,7 @@ hist(rivers, col="blue", border="white", breaks=25)
 hist(log(rivers), col="sienna", border="white", breaks=25) 
 ```
 
+
 ---
 ## Base R and Package
 An R package contains `data sets` and specific `functions` to solve specific question. 
@@ -142,8 +143,6 @@ qplot(data = iris, Sepal.Length, Petal.Length, color = Species, size = Petal.Wid
 
 
 
-
-
 ---
 ## 入門小秘訣 
 
@@ -164,7 +163,6 @@ a <- 19
 a
 ```
 
-
 ---
 ## Modes and classes of R objects
 
@@ -175,6 +173,7 @@ a
 
 ```{r}
 mode(rivers)
+# cf. typeof(rivers)
 ```
 
 
