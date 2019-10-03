@@ -383,16 +383,19 @@ table(mylist$fac)
 ## 基本繪圖 Basic plotting
 
 - `plot()` 是基本作圖函式。
+
+```{r}
+#plot(iris)
+#plot(iris$Sepal.Length, iris$Petal.Length)
+```
+
 - `qplot()` 是 `ggplot2` 作圖套件的一個基本作圖函式，基本用法類似，但較美觀?
 
-```{r, echo=TRUE, results='hide'}
+```{r, echo=FALSE, results='hide'}
 #plot(x = mtcars$mpg, y = mtcars$wt)
 library(ggplot2)
 qplot(mpg, wt, data=mtcars)
 ```
-
-
-
 
 
 ---
@@ -519,6 +522,7 @@ write.csv(data, "~/dsR/data.csv",
           fileEncoding = "utf8"
 )
 ```
+
 
 
 

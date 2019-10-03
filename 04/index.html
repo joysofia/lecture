@@ -306,6 +306,8 @@ summary(mtcars)     # A summary of each column
 
 
 ---
+background-image: url(../img/emo/boredom-small.png)
+---
 ## 因子 Factor
 
 - 複習一下統計學中「變數」的分類
@@ -386,8 +388,6 @@ mylist &lt;- list(num = v1, char = v2, mat = m1, fac = f1, daframe = df1)
 
 
 ---
-background-image: url(../img/emo/boredom-small.png)
----
 ## 列表 List 
 
 
@@ -423,19 +423,16 @@ table(mylist$fac)
 ## 基本繪圖 Basic plotting
 
 - `plot()` 是基本作圖函式。
-- `qplot()` 是 `ggplot2` 作圖套件的一個基本作圖函式，基本用法類似，但較美觀?
 
 
 ```r
-#plot(x = mtcars$mpg, y = mtcars$wt)
-library(ggplot2)
-qplot(mpg, wt, data=mtcars)
+#plot(iris)
+#plot(iris$Sepal.Length, iris$Petal.Length)
 ```
 
-![](index_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+- `qplot()` 是 `ggplot2` 作圖套件的一個基本作圖函式，基本用法類似，但較美觀?
 
-
-
+![](index_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -579,6 +576,7 @@ write.csv(data, "~/dsR/data.csv",
           fileEncoding = "utf8"
 )
 ```
+
 
 
 
