@@ -235,7 +235,7 @@ dim(a)
 # str(); dim(); summary()
 ```
 
-- 使用 tibble 套件的 `tibble()` 建立 data frame
+
 
 ---
 ## Data Frame
@@ -386,6 +386,8 @@ mylist &lt;- list(num = v1, char = v2, mat = m1, fac = f1, daframe = df1)
 
 
 ---
+background-image: url(../img/emo/boredom-small.png)
+---
 ## 列表 List 
 
 
@@ -410,11 +412,14 @@ table(mylist$fac)
 ---
 ## 邏輯流程
 
+.large[
+- 條件判斷
+
+- 迴圈
+]
 
 
-
-
---
+---
 ## 基本繪圖 Basic plotting
 
 - `plot()` 是基本作圖函式。
@@ -563,8 +568,6 @@ data &lt;- read.table(choose.files()) # for Windows
 
 
 ---
-background-image: url(../img/emo/boredom-small.png)
----
 ## Data I/O 資料的輸出 
 
 - `row.names` 和 `col.names` 都是邏輯值。設成 TRUE 則會將 row or column names 一起輸出。
@@ -580,7 +583,7 @@ write.csv(data, "~/dsR/data.csv",
 
 
 ---
-## In-class Exercise [1] 練習讀取外部檔案
+## In-class Exercise 練習讀取外部檔案
 
 [Personality](http://personality-project.org/r/#getdata)
 
@@ -590,7 +593,6 @@ personality &lt;- read.table(
   "http://personality-project.org/r/datasets/maps.mixx.epi.bfi.data", 
   header = TRUE) # or: header = T
 ```
-
 
 
 ---

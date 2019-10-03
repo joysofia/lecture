@@ -211,7 +211,7 @@ dim(a)
 # str(); dim(); summary()
 ```
 
-- 使用 tibble 套件的 `tibble()` 建立 data frame
+
 
 ---
 ## Data Frame
@@ -372,11 +372,14 @@ table(mylist$fac)
 ---
 ## 邏輯流程
 
+.large[
+- 條件判斷
+
+- 迴圈
+]
 
 
-
-
---
+---
 ## 基本繪圖 Basic plotting
 
 - `plot()` 是基本作圖函式。
@@ -520,7 +523,7 @@ write.csv(data, "~/dsR/data.csv",
 
 
 ---
-## In-class Exercise [1] 練習讀取外部檔案
+## In-class Exercise 練習讀取外部檔案
 
 [Personality](http://personality-project.org/r/#getdata)
 
@@ -529,7 +532,6 @@ personality <- read.table(
   "http://personality-project.org/r/datasets/maps.mixx.epi.bfi.data", 
   header = TRUE) # or: header = T
 ```
-
 
 
 ---
