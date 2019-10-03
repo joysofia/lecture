@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Introduction to Data Science with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="謝舒凱" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/chocolate.css" rel="stylesheet" />
+    <link href="libs/remark-css/chocolate-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+background-image: url(https://www.technotification.com/wp-content/uploads/2018/06/R-prograamming-for-data-science.jpg)
+background-position: center
+background-size: cover
+
+
+class: title-slide
+
+.bg-text[
+# Introduction to Data Science with R
+### week.4
+
+&lt;hr /&gt;
+
+10月  3, 2019  
+謝舒凱
+]
+
+
+---
+# 課程資訊公告
+
+.large[
+- [《中文》課程參考網頁](https://rlads2019.github.io/lecture/resources.html)
+
+- 國慶連假後記名不計分小考預告（記名不計分）
+  
+  - DataCamp 前 20% 同學免試
+  
+  - 小考內容 (R 基礎：Datacamp 1-3)
+]
+
+---
+## 學習方式建議
+
+- 給我六個小時砍樹，我會花前四個小時磨斧
+
+- 即早進入 `\(&lt;g,t&gt;\)`
+
+
+
+???
+typeof() , class(), vs  mode() 
+
+
+北鼻態 》 G 點 》大腿/大神態
+
+
+
+---
+## Data Structure
+
+- 為何需要資料結構？
+
+  - `\(&lt;g,t&gt;\)`: **data type** vs **data structure** ? 
+
+- .large[R 提供 6 種基礎的資料結構] 
+
+&lt;span style="color:green; font-weight:bold"&gt;向量 (vector), 矩陣 (matrix), 陣列 (array), 因子 (factor), 列表 (list) and 數據框 (data frame).&lt;/span&gt;
+
+- .large[重點在於：怎麼建立、確認、轉換、取值、操作與計算] 
+    - **create, convert, access, manipulate, calculation**]
+
+???
+list() vs as.list()
+
+
+---
+## 圖示
+
+![](https://miro.medium.com/proxy/1*JjZYjvyBurwgQa1RBRtzAA.png)
+
+
+
+---
+## 向量 Vector 
+
+複習
+
+- All vectors are one-dimensional and each element is of the same type.
+
+---
+## 矩陣 Matrix
+
+- a collection of elements that has a two-dimensional representation(i.e., columns and rows.)
+
+- A matrix can contain elements of the *same* data type only. （`character`, `numeric`, `logical`）
+- **create, convert, access, manipulate, calculation**
+
+
+```r
+m0 &lt;- matrix(c(1,2,3,4,5,6), nrow = 2, ncol =3) 
+m1 &lt;- matrix(1:25, nrow = 5, ncol = 5) # check byrow=
+#rnames &lt;- c("R1", "R2", "R3", "R4", "R5")
+#cnames &lt;- c("C1", "C2", "C3", "C4", "C5")
+#m1 &lt;- matrix(1:25, nrow = 5, ncol = 5, dimnames = list(rnames, cnames))
+# class(m); mode(m)
+```
+
+
+---
+## 矩陣 Matrix
+
+
+```r
+# access 
+m1[3,4]
+m1[,3]
+m1[c(1:3),]
+# convert
+v &lt;- as.vector(m1);v
+```
+
+
+---
+## 矩陣 Matrix
+
+- Another way is to bind columns or rows using `rbind()` and `cbind()`
+- can also use the `byrow` argument to specify how the matrix is filled.
+
+
+```r
+# manipulate: merge and delete
+(y &lt;- c(1:10))
+m2 &lt;- matrix(y, nrow = 5, ncol = 2);m2
+#(m2 &lt;- matrix(y, nrow = 5, ncol = 2, byrow = F))
+(m3 &lt;- rbind(m2, c(11,12)))
+(m4 &lt;- cbind(m3, c(13:18)))
+(m4 &lt;- m4[2,])
+```
+
+
+---
+## 矩陣 Matrix
+### 矩陣運算
+
+
+```r
+# Transpose the whole matrix
+t(m2)
+
+# Matrix multiplication
+m2 %*% t(m2)
+```
+
+
+
+---
+## 陣列 Array
+
+陣列是矩陣的延伸，矩陣可說是 2 維的陣列。而陣列的維度可以大於 2。
+
+```r
+# array(data = NA, dim = length(data), dimnames = NULL)
+z &lt;- c(1:30)
+dim1 &lt;- c("a1", "a2","a3")
+dim2 &lt;- c("b1","b2","b3", "b4", "b5")
+dim3 &lt;- c("c1","c2")
+a &lt;- array(z, dim = c(3,5,2), dimnames = list(dim1,dim2,dim3))
+```
+
+
+---
+## 陣列 Array
+
+
+```r
+a[2,4,1]
+```
+
+```
+## [1] 11
+```
+
+```r
+a['a1','b4','c1']
+```
+
+```
+## [1] 10
+```
+
+```r
+dim(a)
+```
+
+```
+## [1] 3 5 2
+```
+
+
+
+
+---
+## 資料框 Data Frame
+
+.large[最常處理的資料結構]
+
+- A dataframe is similar to the matrix, but in a data frame, the columns can hold data elements of different types.
+
+- the most commonly used data type for most of the analysis. Number of columns equals to number of observed variables; number of rows equals to number of observations.
+
+
+```r
+# create, manipulate, access
+# iris
+(iris.simple &lt;- data.frame(Sepal.Length = c(5.1, 4.7,5.0), 
+                           Sepal.Width = c(3.5, 3.2, 3.6), 
+                           Pedal.Length = c(1.4, 1.3,1.4)))
+```
+
+```
+##   Sepal.Length Sepal.Width Pedal.Length
+## 1          5.1         3.5          1.4
+## 2          4.7         3.2          1.3
+## 3          5.0         3.6          1.4
+```
+
+```r
+# str(); dim(); summary()
+```
+
+- 使用 tibble 套件的 `tibble()` 建立 data frame
+
+---
+## Data Frame
+
+- `[]`, `$`, `subset()`
+
+
+```r
+iris.simple[,1]
+iris.simple$Sepal.Width
+iris.simple$Sepal.Width[2]
+subset(iris.simple, Sepal.Length &lt; 5)
+```
+
+
+---
+## Data Frame
+
+
+```r
+## cbind(), rbind()
+names(iris.simple)
+names(iris.simple)[1] &lt;- "sepal.length"
+```
+
+
+---
+## Data Frame
+
+- 基本運算 
+- 基本統計 `mean(), median(), sum(), min(), max(), sd(), ...`
+
+
+```r
+# 練習自己建立一個 data frame
+students &lt;- data.frame(c("Cedric","Fred","George","Cho","Draco","Ginny"),
+                       c(3,2,2,1,0,-1),
+                       c("H", "G", "G", "R", "S", "G"))
+names(students) &lt;- c("name", "year", "house") # name the columns
+class(students)	# "data.frame"
+class(students$year)	# "numeric"
+class(students[,3])	# "factor"
+# find the dimensions
+nrow(students)	
+ncol(students)	
+dim(students)	
+```
+
+---
+## In-class Exercise 
+
+`mtcars` 是個很好的練習用例子。（打在 `NTU cool` 讓我知道）
+
+
+```r
+#mtcars             # The built-in data frame
+#help(mtcars)
+dim(mtcars)         # The dimensions(rows and columns)
+nrow(mtcars)        # Number of rows
+ncol(mtcars)        # Number of columns
+names(mtcars)       # The column names
+rownames(mtcars)    # The row names
+summary(mtcars)     # A summary of each column
+```
+
+
+
+
+
+---
+## 因子 Factor
+
+- 複習一下統計學中「變數」的分類
+&lt;img style='border: 1px solid;' width=40% src='./img/var.png'&gt;&lt;/img&gt;
+
+- 在 R 中，類別（【男、女】）和有序（【好-中-差】）的變數稱作「因子」(factor). 在 data frame 中常看到。
+
+Factors are variables which take on a limited number of values, aka categorical variables. In R, factors are stored as a vector of integer values with the corresponding set of character values you’ll see when displayed (colloquially, labels; in R, levels).
+
+
+---
+## 因子 Factor
+
+- Factors 可以視為是一種特殊的向量類型。只是其元素由定性變數所組成。
+用 `factor()` 來產生，用 `levels()` 來取得 levels (values the categorical data can take)。
+
+
+```r
+gender &lt;- c("female", "female", "male", "female", "male", "female")
+gender.2 &lt;- factor(gender)
+levels(gender.2)
+```
+
+
+---
+## 因子 Factor
+
+
+
+```r
+# 變成有序因子
+honor &lt;- c("cum laude","summa cum laude", "cum laude", 
+           "summa laude", "magna cum laude","cum laude")
+honor.fac &lt;- factor(honor, 
+                    levels =c("cum laude", "magna cum laude", "summa cum laude"), 
+                    ordered = TRUE); honor.fac
+```
+
+
+
+
+
+
+---
+## List
+
+- 資料結構的大雜燴：其構成元素可以是向量、矩陣、陣列、數據框、甚至是表列。
+
+- list 中的每個元素也可以有不同長度。
+
+
+
+
+
+---
+## List
+
+- **create, access, manipulate**
+
+
+```r
+# create
+v1 &lt;- c(1:10)
+v2 &lt;- c("life", "is", "short")
+m1 &lt;- matrix(c(1:9), nrow=3)
+f1 &lt;- factor(c("positive", "negative", "negative", "neutral", "positive"))
+name &lt;- c("jessy", "jessica", "jessie")
+R &lt;- c(60, 90, 92)
+PYTHON &lt;- c(60, 95, 93)
+piano &lt;- c("great", "ok","ok")
+df1 &lt;- data.frame(name, R, PYTHON, piano)
+mylist &lt;- list(v1,v2,m1,f1, df1)
+# 命名(注意語法！)
+mylist &lt;- list(num = v1, char = v2, mat = m1, fac = f1, daframe = df1)
+```
+
+- `list()` vs. `as.list()`: create vs coerce
+
+
+---
+## 列表 List 
+
+
+```r
+## access: three ways: [[index]], [[element.name]], list$element.name
+mylist[[1]]
+mylist[["num"]]
+mylist$num
+```
+- 利用 `table()` 建立 contingency table; `prop.table()` 轉成頻率。
+
+```r
+table(mylist$fac)
+```
+
+```
+## 
+## negative  neutral positive 
+##        2        1        2
+```
+
+---
+## 邏輯流程
+
+
+
+
+
+--
+## 基本繪圖 Basic plotting
+
+- `plot()` 是基本作圖函式。
+- `qplot()` 是 `ggplot2` 作圖套件的一個基本作圖函式，基本用法類似，但較美觀?
+
+
+```r
+#plot(x = mtcars$mpg, y = mtcars$wt)
+library(ggplot2)
+qplot(mpg, wt, data=mtcars)
+```
+
+![](index_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+
+
+
+
+
+---
+## In-class Exercise
+
+- 結合上述資料，建立 data frame (無序、分類變數)。
+- 利用 `table()` 建立 contingency table; `prop.table()` 轉成頻率。
+- 做圖
+
+
+
+
+
+---
+## Preparing/cleaning data
+
+- In many cases, getting our data in the rectangular arrangement of a matrix or data frame is the first step in preparing it for analysis. 
+- As much as 60%-80% of the time Data Scientists spent on data analysis is focused on preparing the data for analysis.
+  
+  - (numerical data) handling missing data, outliers
+  - (textual data) : tokenization/word segmentation
+
+
+
+---
+## Missing values 缺失值處理
+
+&gt; Missing values are values that should have been recorded but were not.
+
+-  a numeric missing value is represented by `NA` (Not Available) while character missing values are represented by `&lt;NA&gt;`. 
+
+- use the `is.na()` to identify the presence of NA for each column; 
+the function `anyNA()` returns TRUE if the vector contains any missing values.
+
+
+
+```r
+(missing_dat &lt;- data.frame(col.1=c(1,NA,0,1),col.2=c("M","F",NA,"M")))
+
+is.na(missing_dat$col.1)
+
+anyNA(missing_dat)
+# 提取非缺失值
+missing_dat[!is.na(missing_dat)]
+```
+
+
+---
+## Missing values 缺失值處理
+
+
+- We can replace the NA with the mean value or we can **remove these NA rows**.
+
+```r
+(newdata &lt;- na.omit(missing_dat))
+```
+
+- 有許多函式都帶有 `na.rm` 參數，設成 TRUE 執行時會自動刪除所有的 NA，不然造成 `NA+[anything]=NA`。但要注意：Substitute or remove 從方法論上來說不一定是好事。
+
+```r
+sum(c(NA, 1,44,23,NA,99), na.rm = TRUE)
+```
+
+```
+## [1] 167
+```
+
+
+???
+NaN, NULL, Inf 用 is.na() 來檢查
+
+---
+## Reading big files with `data.table`
+
+The `data.table` package is extremely useful — and much, much faster than `read.table` — for larger files. 
+
+```r
+require(data.table) 
+```
+
+```
+## Loading required package: data.table
+```
+
+```r
+students &lt;- as.data.table(students)
+students # note the slightly different print-out
+students[name=="Ginny"] # get rows with name == "Ginny"
+students[year==2] # get rows with year == 2
+```
+
+
+---
+## Basic I/O
+
+了解預設值
+
+- `read.table(file, header = TRUE, sep = "")`
+
+- `write.table(x, file = "", append = FALSE, sep = " ",
+     row.name = TRUE, col.names = TRUE)`
+
+
+
+
+
+
+---
+## Data input
+
+
+- `read.table()` 是最基本的資料輸入函式。至少有幾個參數要了解：`file, header, sep, stringAsFactors`
+
+  - **file**: 相對路徑或絕對路徑，用 `/` 或是 `\\` 來表示。(e.g., OSX `"~/dsR/data"`, Windows `"C:\\dsR\\data"`)
+  - **header**: 邏輯值。設成 TRUE，會將第一個 row 當成變數名。
+  - **sep**: 分隔符號。預設為空格。
+  - **stringAsFactors**: 預設是將字串的資料類型轉換成 factor 變數。想要字串被當成字串，則設成 FALSE.
+  - For data exported from Excel, use `na.strings = c("", "#N/A", "#DIV/0!", "#NUM!")`.
+  - **fill**: Load data file with columns of unequal length. 如果我們的原始檔本身,有不同的 columns 長度,那麼我們用`fill=TRUE`來補上 blank。
+  
+  
+---
+## 給還沒習慣路徑概念的人
+
+
+```r
+data &lt;- read.table(file.choose()) # for MAC/Linux
+data &lt;- read.table(choose.files()) # for Windows
+```
+
+
+---
+background-image: url(../img/emo/boredom-small.png)
+---
+## Data I/O 資料的輸出 
+
+- `row.names` 和 `col.names` 都是邏輯值。設成 TRUE 則會將 row or column names 一起輸出。
+
+
+```r
+write.csv(data, "~/dsR/data.csv",
+          row.names    = FALSE,
+          fileEncoding = "utf8"
+)
+```
+
+
+
+---
+## In-class Exercise [1] 練習讀取外部檔案
+
+[Personality](http://personality-project.org/r/#getdata)
+
+
+```r
+personality &lt;- read.table(
+  "http://personality-project.org/r/datasets/maps.mixx.epi.bfi.data", 
+  header = TRUE) # or: header = T
+```
+
+
+
+---
+## Review
+
+&lt;img style='border: 1px solid;' width=50% src='./img/data-science.png'&gt;&lt;/img&gt;
+
+資料科學涉及的歷程：
+- (操作型)定義可以利用資料回答的問題 (問題的類型決定了答案的類型！)
+- 蒐集與清理資料
+- 探索、分析資料 (資料不適合回答問題，怎麼辦？)
+- 溝通 （transfer your findings to action!!） 
+
+
+
+
+
+---
+## 分組練習
+
+&lt;span style="color:green; font-weight:bold"&gt;自己的資料自己玩&lt;/span&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

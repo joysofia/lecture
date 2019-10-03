@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Data Science with R"
-subtitle: "week 2"
+subtitle: "week 3"
 author: "謝舒凱"
 date: "`r format(Sys.Date(), '%B %e, %Y')`"
 
