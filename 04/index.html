@@ -27,7 +27,7 @@ class: title-slide
 
 &lt;hr /&gt;
 
-10月  3, 2019  
+10月  7, 2019  
 謝舒凱
 ]
 
@@ -42,7 +42,7 @@ class: title-slide
   
   - DataCamp 前 20% 同學免試
   
-  - 小考內容 (R 基礎：Datacamp 1-3)
+  - 小考內容 (R 基礎：Datacamp R 基礎 course 1-3)
 ]
 
 ---
@@ -305,8 +305,6 @@ summary(mtcars)     # A summary of each column
 
 
 
----
-background-image: url(../img/emo/boredom-small.png)
 ---
 ## 因子 Factor
 
@@ -594,6 +592,8 @@ personality &lt;- read.table(
 
 
 ---
+background-image: url(../img/emo/boredom-small.png)
+---
 ## Review
 
 &lt;img style='border: 1px solid;' width=50% src='./img/data-science.png'&gt;&lt;/img&gt;
@@ -612,6 +612,17 @@ personality &lt;- read.table(
 ## 分組練習
 
 &lt;span style="color:green; font-weight:bold"&gt;自己的資料自己玩&lt;/span&gt;
+
+
+
+```r
+dsr &lt;- read.csv("data/week3.in.class.csv", header = TRUE, stringsAsFactors = FALSE)
+dsr.clean &lt;- na.omit(dsr)
+dsr.clean$gender &lt;-factor(dsr.clean$gender)
+dsr.clean$grade &lt;-factor(dsr.clean$grade)
+str(dsr.clean)
+table(dsr.clean$gender)
+```
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

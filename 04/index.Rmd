@@ -51,7 +51,7 @@ class: title-slide
   
   - DataCamp 前 20% 同學免試
   
-  - 小考內容 (R 基礎：Datacamp 1-3)
+  - 小考內容 (R 基礎：Datacamp R 基礎 course 1-3)
 ]
 
 ---
@@ -559,11 +559,14 @@ personality <- read.table(
 <span style="color:green; font-weight:bold">自己的資料自己玩</span>
 
 
-
-
-
-
-
+```{r, eval=FALSE}
+dsr <- read.csv("data/week3.in.class.csv", header = TRUE, stringsAsFactors = FALSE)
+dsr.clean <- na.omit(dsr)
+dsr.clean$gender <-factor(dsr.clean$gender)
+dsr.clean$grade <-factor(dsr.clean$grade)
+str(dsr.clean)
+table(dsr.clean$gender)
+```
 
 
 
