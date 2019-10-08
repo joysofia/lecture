@@ -1,52 +1,3 @@
-## R 語言與資料科學導論
-
-
-
-
-`資料科學家`的工作, 可以視為是一個探索、預測與解讀資料意義的互動歷程。而`語言分析`的工作, 在了解文本資料的語意與情緒表現上是重要的關鍵。本課程結合 了目前統計程式設計、文本分析與自然語言處理技術，希望以較為簡潔容易入門的設計與實際操作導引，希望可以讓毫無相關程式學習基礎的學生在本課程的帶領下，達到以下的學習目標:
-
-- 瞭解 R 語言的基本知識，以及它的軟體生態系。
-- 瞭解結構與非結構性資料的特性與預處理工作, 特別是針對中文文本中呈現的語言特性的處理方法。
-- <span style="color:blue; font-weight:bold">了解中文的語言特性與文本解析 (text analytics) 的基本概念。</span>
-- 選擇適當的變數與特徵並加以合理調製，對之進行描述統計與視覺探勘， 針對不同的問題點與數據類型，找出適當的圖形表達與統計分析。
-- 學習簡易的自然語言處理與機器學習預測模式，並應用在自己關心的領域。
-- 學習實作資料科學專案與溝通表達。
-
-What you will learn:
-
-```markdown
-> R programming language and its ecosystem of package for data science
-> Exploratory data analysis
-> Text analytics and data mining concepts
-> Light-weight Natural Language Processing and Machine Learning techniques
-
-```
-
-This is an introduction to the data science with R, focused on textual data in particular. In the course you'll learn the intertwined processes of data manipulation and visualization through the tidyverse framework, as well as other text analytics related packages.This is a suitable introduction for students who have no previous experience in programming  and are interested in learning to perform data analysis on their field.
-
-
-
-
-
-
-## 課程投影片 | slides
-
-- <span style="color:brown; font-weight:bold"> Week.1 </span>
-    - [slides](01/index.html)
-
-- <span style="color:brown; font-weight:bold"> Week.2 </span>
-    - [slides](02/index.html)
-    - [R.notes.Rmd](02/week2_note.Rmd)
-
-- <span style="color:brown; font-weight:bold"> Week.3 </span>
-    - [slides](03/index.html)
-
-
-- <span style="color:brown; font-weight:bold"> Week.4 </span>
-    - [slides](04/index.html)
-
-
-
 ## 課綱
 
 
@@ -75,19 +26,25 @@ This is an introduction to the data science with R, focused on textual data in p
 
 
 
-## 教練團
 
-```coffee
-謝舒凱 <shukaihsieh@g.ntu.edu.tw>
-廖永賦 
-Yolanda 
-Jessy 
-Joy
-```
 
-## 學習資源
-- Datacamp
-- [線上學習資源](resources.html)
+## 課程投影片 | slides
+
+- <span style="color:brown; font-weight:bold"> Week.1 </span>
+    - [slides](01/index.html)
+
+- <span style="color:brown; font-weight:bold"> Week.2 </span>
+    - [slides](02/index.html)
+    - [R.notes.Rmd](02/week2_note.Rmd)
+
+- <span style="color:brown; font-weight:bold"> Week.3 </span>
+    - [slides](03/index.html)
+
+
+- <span style="color:brown; font-weight:bold"> Week.4 </span>
+    - [slides](04/index.html)
+
+
 
 
 <!--
